@@ -1,14 +1,24 @@
 @charset "utf-8";
 /* CSS Document */
 
-.container {
+html, body {
+    height:100%;
+}
+
+.container-my {
     padding:  350px;        /* 余白指定 */
     background-image: url("/images/V5dIlq4UFSB5zBZ1583241348_1583241374.jpg"),  /* 背景画像指定 */
-                      url("/images/bMfx5U0rQhNNLVe1583240244_1583240308.png"),
                       url("/images/23bf3e6ec504a94206d6c6d58aba94e4.jpg");
     background-repeat:  no-repeat;
-    background-size: 30%,30%,cover;
-    background-position: left 10px top 10px,center,center;
+    background-size: 30%,cover;
+    background-position: left 10px top 10px,center;
+    height:0%;
+}
+
+#login_link {
+    position: absolute;
+    bottom: 30%;
+    right: 4%;
 }
 
 #view_count {

@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body {
+    height:100%;
+}
+
+.inner {
+    background-image: url("/images/IMG_3367.jpg");  /* 背景画像指定 */
+    background-repeat:  no-repeat;
+    background-size: cover;
+    height: 650px;
+}
+
+h1.site-title {
+    position: absolute;/*相対位置*/
+    padding-left: 1.2em;/*アイコン分のスペース*/
+    line-height: 1.4;/*行高*/
+    color: #FFCC66;/*文字色*/
+    font-size : 350%;
+    top: 5%;
+    left: 33%;
+}
+
+h1.site-title:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f1b0";/*アイコンのユニコード*/
+    position: absolute;/*絶対位置*/
+    font-size: 1em;/*サイズ*/
+    left: 0;/*アイコンの位置*/
+    top: 0;/*アイコンの位置*/
+    color: #ff938b; /*アイコン色*/
+}
+
+ul.menu-social {
+    position: absolute;/*相対位置*/
+    top: 80%;
+    left: 43%;
+}
+
+li.menu-item {
+    display: inline;
+    margin-right: 10px;
+}
+
+#primary-menu {
+    text-align: center;
+}
+#primary-menu li {
+    display: inline-block;
+}
