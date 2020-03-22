@@ -7,7 +7,7 @@ html, body {
 
 .inner {
     background-image: url("/images/IMG_3367.jpg");  /* 背景画像指定 */
-    background-repeat:  no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     height: 650px;
 }
@@ -48,4 +48,110 @@ li.menu-item {
 }
 #primary-menu li {
     display: inline-block;
+}
+
+h1.article {
+    position: relative;
+    background: #ffd98a;
+    padding: 2px 5px 2px 25px;
+    font-size: 20px;
+    color: #474747;
+    border-radius: 0 10px 10px 0;
+}
+
+h1.article:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f1b0";
+    display: inline-block;
+    line-height: 40px;
+    position: absolute;
+    padding: 0em;
+    color: white;
+    background: #ffa337;
+    font-weight: normal;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    left: -1.35em;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: solid 3px white;
+    border-radius: 50%;
+}
+
+.flex-box {
+    background-color: #eee;     /* 背景色指定 */
+    padding:  10px;             /* 余白指定 */
+    display: flex;              /* フレックスボックスにする */
+    align-items:stretch;        /* 縦の位置指定 */
+    justify-content:flex-start;
+    flex-direction:row;         /* 要素の並び順 */
+    -webkit-flex-wrap: wrap;          /* Safari etc. */
+    -ms-flex-wrap    : wrap;          /* IE10        */
+    flex-wrap: wrap;            /* 折り返し指定 */
+    align-content:stretch;      /* 折り返し時の配置指定 */
+}
+
+.flex-item {
+    padding: 10px;
+    color:  #fff;               /* 文字色 */
+    margin:  10px;              /* 外側の余白 */
+    border-radius:  5px;        /* 角丸指定 */
+    width: 30%;                 /* 幅指定 */
+}
+
+.flex-item:nth-child(1) {
+    background-color:  #2196F3; /* 背景色指定 */
+}
+
+.flex-item:nth-child(2) {
+    background-color:  #4CAF50; /* 背景色指定 */
+}
+
+.flex-item:nth-child(3) {
+    background-color: #3F51B5; /* 背景色指定 */
+}
+
+.flex-item:nth-child(4) {
+    background-color:  #00BCD4; /* 背景色指定 */
+}
+
+.flex-item:nth-child(5) {
+    background-color:  #2196F3; /* 背景色指定 */
+}
+
+.flex-item:nth-child(6) {
+    background-color:  #2196F3; /* 背景色指定 */
+}
+
+.flex-item:nth-child(7) {
+    background-color:  #2196F3; /* 背景色指定 */
+}
+
+.flex-item:nth-child(8) {
+    background-color:  #2196F3; /* 背景色指定 */
+}
+
+.flex-item:nth-child(9) {
+    background-color:  #2196F3; /* 背景色指定 */
+}
+
+.pagination li {
+    display: inline;
+    padding:10px 15px;
+    border:1px #ccc solid;color:#000053;
+    border-radius: 5px / 5px;
+    display: inline;
+}
+
+.pagination .this {
+    background-color: #777;
+    color: #fff;
+    text-align: center;
+}
+
+.time-grey {
+    color: lightgrey;
 }

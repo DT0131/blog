@@ -43,11 +43,6 @@
                             </div>
                         </nav><!-- .jetpack-social-navigation -->
 
-                        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"
-                                id="primary-menu-button">
-                            メニュー
-                        </button><!-- .menu-toggle -->
-
                     </div><!-- .inner -->
 
                     <div class="menu-primary-container">
@@ -63,6 +58,40 @@
                         </ul>
                     </div>
 
+                    <h1 class="article">記事一覧</h1>
+                    <article>
+                        <p>おもちの日常について投稿します。</p>
+
+                        @if(!empty($data))
+                            <div class="flex-box">
+                            @foreach($data as $list)
+                                <div class="flex-item">
+                                    @if(!empty($list->image1))
+                                    <img src="{{$list->image1}}" width="100%"/>
+                                    @endif
+                                    <h3>タイトル：{{$list->title}}</h3>
+                                    <p>内容：{{$list->content}}</p>
+                                    @if($now->diffInYears($list->created_at) !== 0)
+                                    <p class="time-grey">{{$now->diffInYears($list->created_at)}}年前</p>
+                                    @elseif($now->diffInWeeks($list->created_at) !== 0)
+                                    <p class="time-grey">{{$now->diffInWeeks($list->created_at)}}週間前</p>
+                                    @elseif($now->diffInDays($list->created_at) !== 0)
+                                    <p class="time-grey">{{$now->diffInDays($list->created_at)}}日前</p>
+                                    @elseif($now->diffInHours($list->created_at) !== 0)
+                                    <p class="time-grey">{{$now->diffInHours($list->created_at)}}時間前</p>
+                                    @elseif($now->diffInMinutes($list->created_at) !== 0)
+                                    <p class="time-grey">{{$now->diffInMinutes($list->created_at)}}分前</p>
+                                    @else
+                                    <p class="time-grey">{{$now->diffInSeconds($list->created_at)}}秒前</p>
+                                    @endif
+                                </div>
+                            @endforeach
+                            </div>
+                        @endif
+
+                    </article>
+
+                    {{ $data->links() }}
 
                 </header><!-- #masthead -->
             </div>

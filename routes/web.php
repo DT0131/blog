@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource('my', 'MyController');
 
 Route::resource('top', 'TopController');
+
+Route::resource('article', 'ArticleController');
+
+Route::post('article', 'ArticleController@store');
