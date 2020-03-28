@@ -10,13 +10,11 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        var_dump('get');
         return view('article');
     }
 
     public function store(Request $request)
     {
-        var_dump('post');
         // バリデーションチェック
         $request->validate([
             'title' => ['required', 'max:30'],
@@ -36,12 +34,9 @@ class ArticleController extends Controller
                 if (empty($image)) {
                     continue;
                 }
-                var_dump('画像保存');
 
                 $path = $image->store('images', 's3');
                 $url = Storage::disk('s3')->url($path);
-
-                var_dump($url);
 
                 $imageNumber = "image".$key;
                 $articles->$imageNumber = $url;
