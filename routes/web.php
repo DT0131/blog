@@ -22,6 +22,8 @@ Route::resource('my', 'MyController');
 
 Route::resource('top', 'TopController');
 
-Route::resource('article', 'ArticleController');
+Route::get('/article', 'ArticleController@index');
 
-Route::post('article', 'ArticleController@store');
+Route::post('/article', 'ArticleController@store');
+
+Route::get('post/{id}', 'PostController@post');

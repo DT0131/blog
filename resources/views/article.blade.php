@@ -4,15 +4,11 @@
 
 @section('sidebar')
     @parent
-
-    <!--
-    <p>ここはメインのサイドバーに追加される</p>
-    -->
 @endsection
 
 @section('content')
     <html>
-    <form action="{{ url('/article')}}" method="post" enctype="multipart/form-data">
+    <form action="{{ action('ArticleController@store')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div>
             <label for="name">タイトル</label>
@@ -25,6 +21,7 @@
             <div class="alert alert-danger">30文字以内で入力してください。</div>
         @endif
         @enderror
+        <strong>「画像2」、「画像3」の文字を入力することでその位置に画像を表示できます。</strong>
         <div>
             <label for="message">内容</label>
             <textarea id="content" name="content"></textarea>
@@ -36,14 +33,33 @@
             <div class="alert alert-danger">200文字以内で入力してください。</div>
         @endif
         @enderror
+        <strong>見出し画像を含めて3枚まで投稿できます。</strong>
         <div>
-            <label for="image">画像</label>
-            <input type="file" id="image" name="image">
+            <label for="image">見出し画像</label>
+            <input type="file" id="image1" name="images[1]">
         </div>
-        @error('image')
+        @error('images[1]')
+        <div class="alert alert-danger">{{ $message }}</div>
+        <p>{{$message}}</p>
+        @enderror
+        <div>
+            <label for="image">画像2</label>
+            <input type="file" id="image2" name="images[2]">
+        </div>
+        @error('images[2]')
+        <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
+        <div>
+            <label for="image">画像3</label>
+            <input type="file" id="image3" name="images[3]">
+        </div>
+        @error('images[3]')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <input type="submit" value="送信する">
     </form>
+    @if(isset($saveSuccessMessage))
+        <strong>{{$saveSuccessMessage}}</strong>
+    @endif
     </html>
 @endsection
