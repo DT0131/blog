@@ -1,25 +1,130 @@
 @charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+
 /* CSS Document */
 
 html, body {
     height:100%;
 }
 
+#header-menu {
+    text-align: right;
+}
+
+#header-menu li {
+    display: inline-block;
+}
+
+#footer-menu {
+    text-align: center;
+}
+
+#footer-menu li {
+    display: inline-block;
+}
+
+h1.site-title-in-header {
+    position: absolute;/*相対位置*/
+    padding-left: 1.3em;/*アイコン分のスペース*/
+    line-height: 1.2;/*行高*/
+    color: black;/*文字色*/
+    font-size : 200%;
+    top: 0;
+    left: 0;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: left;
+}
+
+h1.site-title-in-header:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f1b0";/*アイコンのユニコード*/
+    position: absolute;/*絶対位置*/
+    font-size: 1em;/*サイズ*/
+    left: 0.3em;/*アイコンの位置*/
+    top: 0;/*アイコンの位置*/
+    color: lightpink; /*アイコン色*/
+}
+
+.header-link {
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #FFF;
+    background: #ffa337;
+    transition: .4s;
+}
+
+.header-link:hover {
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+
+.btn-social-long-instagram {
+    /*ボタンの下地*/
+    color: #FFF;/*文字・アイコン色*/
+    border-radius: 7px;/*角丸に*/
+    position: relative;
+    top: 0.65em;
+    display: inline-block;
+    height: 23px;/*高さ*/
+    width: 125px;/*幅*/
+    text-align: center;/*中身を中央寄せ*/
+    font-size: 20px;/*文字のサイズ*/
+    line-height: 20px;/*高さと合わせる*/
+    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
+    overflow: hidden;/*はみ出た部分を隠す*/
+    text-decoration:none;/*下線は消す*/
+}
+
+.btn-social-long-instagram:before {
+    /*グラデーション②*/
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;/*全体を覆う*/
+    height: 100%;/*全体を覆う*/
+    background: linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+}
+
+.btn-social-long-instagram .fab fa-instagram {
+    /*アイコン*/
+    font-size: 35px;/*アイコンサイズ*/
+    position: relative;
+    top: 4px;/*アイコン位置の微調整*/
+}
+
+.btn-social-long-instagram span {
+    /*テキスト*/
+    display:inline-block;
+    position: relative;
+    transition: .5s
+}
+
+.btn-social-long-instagram:hover span {
+    /*ホバーで一周回転*/
+    -webkit-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+}
+
 .inner {
-    background-image: url("/images/IMG_3367.jpg");  /* 背景画像指定 */
-    background-repeat:  no-repeat;
+    background-image: url("/images/IMG_3163.jpg");  /* 背景画像指定 */
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 650px;
+    height: 620px;
 }
 
 h1.site-title {
     position: absolute;/*相対位置*/
-    padding-left: 1.2em;/*アイコン分のスペース*/
+    padding-left: 1.3em;/*アイコン分のスペース*/
     line-height: 1.4;/*行高*/
-    color: #FFCC66;/*文字色*/
+    color: black;/*文字色*/
     font-size : 350%;
-    top: 5%;
-    left: 33%;
+    top: 6%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    width: 100%;
+    text-align: left;
 }
 
 h1.site-title:before {
@@ -27,9 +132,9 @@ h1.site-title:before {
     content: "\f1b0";/*アイコンのユニコード*/
     position: absolute;/*絶対位置*/
     font-size: 1em;/*サイズ*/
-    left: 0;/*アイコンの位置*/
-    top: 0;/*アイコンの位置*/
-    color: #ff938b; /*アイコン色*/
+    left: 0.2em;/*アイコンの位置*/
+    top: 1%;/*アイコンの位置*/
+    color: lightpink; /*アイコン色*/
 }
 
 ul.menu-social {
@@ -43,9 +148,155 @@ li.menu-item {
     margin-right: 10px;
 }
 
-#primary-menu {
+h1.article {
+    position: relative;
+    background: #ffd98a;
+    padding: 2px 5px 2px 45px;
+    font-size: 30px;
+    color: #474747;
+    border-radius: 20px;
+}
+
+h1.article:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f1b0";/*アイコンのユニコード*/
+    display: inline-block;
+    line-height: 40px;
+    position: absolute;
+    padding: 0em;
+    color: white;
+    background: #ffa337;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    left: -0.25em;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: solid 3px white;
+    border-radius: 50%;
+}
+
+.flex-box {
+    background-color: #eee;     /* 背景色指定 */
+    padding:  10px;             /* 余白指定 */
+    display: flex;              /* フレックスボックスにする */
+    align-items:stretch;        /* 縦の位置指定 */
+    justify-content:flex-start;
+    flex-direction:row;         /* 要素の並び順 */
+    -webkit-flex-wrap: wrap;          /* Safari etc. */
+    -ms-flex-wrap    : wrap;          /* IE10        */
+    flex-wrap: wrap;            /* 折り返し指定 */
+    align-content:stretch;      /* 折り返し時の配置指定 */
+}
+
+.flex-item {
+    position: relative;
+    padding: 10px;
+    color:  #fff;               /* 文字色 */
+    margin:  10px;              /* 外側の余白 */
+    border-radius:  5px;        /* 角丸指定 */
+    width: 30%;                 /* 幅指定 */
+}
+
+.flex-item a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flex-item:nth-child(1) {
+    background-color:  #ffd98a; /* 背景色指定 */
+}
+
+.flex-item:nth-child(2) {
+    background-color:  #ffd98a; /* 背景色指定 */
+}
+
+.flex-item:nth-child(3) {
+    background-color: #ffd98a; /* 背景色指定 */
+}
+
+.flex-item:nth-child(4) {
+    background-color:  #ffd98a; /* 背景色指定 */
+}
+
+.flex-item:nth-child(5) {
+    background-color:  #ffd98a; /* 背景色指定 */
+}
+
+.flex-item:nth-child(6) {
+    background-color:  #ffd98a; /* 背景色指定 */
+}
+
+.flex-item:nth-child(7) {
+    background-color:  #ffd98a; /* 背景色指定 */
+}
+
+.flex-item:nth-child(8) {
+    background-color:  #ffd98a; /* 背景色指定 */
+}
+
+.flex-item:nth-child(9) {
+    background-color:  #ffd98a; /* 背景色指定 */
+}
+
+.flex-item:nth-child(10) {
+    background-color:  #ffd98a; /* 背景色指定 */
+}
+
+.flex-item:nth-child(11) {
+    background-color:  #ffd98a; /* 背景色指定 */
+}
+
+.flex-item:nth-child(12) {
+    background-color:  #ffd98a; /* 背景色指定 */
+}
+
+.pagination {
+    text-align: right;
+}
+
+.pagination li {
+    display: inline;
+    padding:10px 15px;
+    border:1px #ccc solid;color:#000053;
+    border-radius: 5px / 5px;
+}
+
+.pagination .this {
+    background-color: #777;
+    color: #fff;
     text-align: center;
 }
-#primary-menu li {
-    display: inline-block;
+
+
+
+
+
+.post{
+    position: relative;
+    background: #fff0cd;
+    box-shadow: 0px 0px 0px 5px #fff0cd;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
+}
+.post:after{
+    position: absolute;
+    content: '';
+    right: -7px;
+    top: -7px;
+    border-width: 0 15px 15px 0;
+    border-style: solid;
+    border-color: #ffdb88 #fff #ffdb88;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+.post p {
+    margin: 0;
+    padding: 0;
 }
