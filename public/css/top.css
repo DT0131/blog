@@ -181,23 +181,38 @@ h1.article:before {
 .flex-box {
     background-color: #eee;     /* 背景色指定 */
     padding:  10px;             /* 余白指定 */
-    display: flex;              /* フレックスボックスにする */
-    align-items:stretch;        /* 縦の位置指定 */
-    justify-content:flex-start;
-    flex-direction:row;         /* 要素の並び順 */
-    -webkit-flex-wrap: wrap;          /* Safari etc. */
-    -ms-flex-wrap    : wrap;          /* IE10        */
-    flex-wrap: wrap;            /* 折り返し指定 */
-    align-content:stretch;      /* 折り返し時の配置指定 */
+    display: flex; /* フレックスボックスにする */
+    align-items: stretch; /* 縦の位置指定 */
+    justify-content: flex-start;
+    flex-direction: row; /* 要素の並び順 */
+    -webkit-flex-wrap: wrap; /* Safari etc. */
+    -ms-flex-wrap: wrap; /* IE10        */
+    flex-wrap: wrap; /* 折り返し指定 */
+    align-content: stretch; /* 折り返し時の配置指定 */
 }
 
-.flex-item {
-    position: relative;
-    padding: 10px;
-    color:  #fff;               /* 文字色 */
-    margin:  10px;              /* 外側の余白 */
-    border-radius:  5px;        /* 角丸指定 */
-    width: 30%;                 /* 幅指定 */
+/* ▼表示領域が1237px以上の場合 */
+@media (min-width: 1237px) {
+    .flex-item {
+        position: relative;
+        padding: 10px;
+        color: #fff; /* 文字色 */
+        margin: 10px; /* 外側の余白 */
+        border-radius: 5px; /* 角丸指定 */
+        width: 30%; /* 幅指定 */
+    }
+}
+
+/* ▼表示領域が1237px未満の場合 */
+@media (max-width: 1236px) {
+    .flex-item {
+        position: relative;
+        padding: 10px;
+        color: #fff; /* 文字色 */
+        margin: 10px; /* 外側の余白 */
+        border-radius: 5px; /* 角丸指定 */
+        width: 45%; /* 幅指定 */
+    }
 }
 
 .flex-item a {
