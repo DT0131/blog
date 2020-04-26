@@ -18,7 +18,7 @@ class ArticleController extends Controller
         // バリデーションチェック
         $request->validate([
             'title' => ['required', 'max:30'],
-            'content' => ['required', 'max:200'],
+            'content' => ['required', 'max:1000'],
         ]);
 
         // バリデーション成功時はデータの保存
