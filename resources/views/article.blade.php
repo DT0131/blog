@@ -29,8 +29,8 @@
         @error('content')
         @if ($message === "The content field is required.")
             <div class="alert alert-danger">必ず入力してください。</div>
-        @elseif ($message === "The title may not be greater than 200 characters.") {
-            <div class="alert alert-danger">200文字以内で入力してください。</div>
+        @elseif ($message === "The title may not be greater than 1000 characters.") {
+        <div class="alert alert-danger">1000文字以内で入力してください。</div>
         @endif
         @enderror
         <strong>見出し画像を含めて3枚まで投稿できます。</strong>
