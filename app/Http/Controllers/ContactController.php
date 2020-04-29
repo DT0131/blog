@@ -36,13 +36,6 @@ class ContactController extends Controller
         // DBにデータ保存
         $contacts->save();
 
-        $saveSuccessMessage = "下記の問い合わせ内容を受け付けました。" . PHP_EOL . "ありがとうございました。";
-
-        $contactContents[] = (!empty($request->name)) ? "お名前：" . $request->name : "";
-        $contactContents[] = (!empty($request->kana)) ? "ふりがな：" . $request->kana : "";
-        $contactContents[] = (!empty($request->email)) ? "メールアドレス：" . $request->email : "";
-        $contactContents[] = (!empty($request->detail)) ? "ご意見・ご要望" . PHP_EOL . $request->detail : "";
-
-        return view('contact_complete', compact('saveSuccessMessage', 'contactContents'));
+        return view('contact_complete');
     }
 }
