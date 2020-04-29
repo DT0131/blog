@@ -19,7 +19,7 @@
                 <a target="_blank" href="https://www.instagram.com/omochi_no_iru_seikatsu/?hl=ja">
                     <span>Instagram</span>
                 </a>
-                <a id="contact" href="#">
+                <a id="contact" href="{{ route('contact.index') }}">
                     <span>Contact</span>
                 </a>
             </Slide>
