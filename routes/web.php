@@ -31,3 +31,6 @@ Route::get('/article', 'ArticleController@index');
 Route::post('/article', 'ArticleController@store');
 
 Route::get('post/{id}', 'PostController@post');
+
+Route::resource('contact', 'ContactController');
+Route::post('/contact', 'ContactController@store');
