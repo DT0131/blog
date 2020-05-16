@@ -34,3 +34,6 @@ Route::get('post/{id}', 'PostController@post');
 
 Route::resource('contact', 'ContactController');
 Route::post('/contact', 'ContactController@store');
+
+// サイトマップ
+Route::get('/sitemap', 'SiteMapController@sitemap');
