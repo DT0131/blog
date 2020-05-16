@@ -11,7 +11,7 @@ class SiteMapController extends Controller
 {
     public function sitemap()
     {
-        $sitemap = App::make("sitemap");
+        $sitemap = App("sitemap");
         $now = Carbon::now();
         $sitemap->add(URL::to('/'), $now, '1.0', 'always');
         $sitemap->add(URL::to('/top'), $now, '1.0', 'always');
