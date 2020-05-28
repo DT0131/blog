@@ -30,7 +30,7 @@
                 <a href="{{ route('top.index') }}">
                     <span>Home</span>
                 </a>
-                <a target="_blank" href="https://www.instagram.com/omochi_no_iru_seikatsu/?hl=ja">
+                <a target="_blank" href="https://www.instagram.com/omomaru_no_iru_seikatsu/?hl=ja">
                     <span>Instagram</span>
                 </a>
                 <a id="contact" href="{{ route('contact.index') }}">
@@ -52,7 +52,8 @@
                 <a href="{{ route('top.index') }}" class="header-link">Home</a>
             </li>
             <li>
-                <a target="_blank" href="https://www.instagram.com/omochi_no_iru_seikatsu/?hl=ja" class="header-link btn-social-long-instagram">
+                <a target="_blank" href="https://www.instagram.com/omomaru_no_iru_seikatsu/?hl=ja"
+                   class="header-link btn-social-long-instagram">
                     <i class="fab fa-instagram"></i> <span>Follow Me</span>
                 </a>
             </li>

@@ -24,6 +24,8 @@ html, body {
 
 #footer-menu {
     text-align: center;
+    list-style-type: none;
+    padding-left: 0;
 }
 
 #footer-menu li {
