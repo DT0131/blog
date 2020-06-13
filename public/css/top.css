@@ -30,7 +30,7 @@ html, body {
 
 #footer-menu li {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 h1.site-title-in-header {
