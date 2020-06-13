@@ -30,6 +30,7 @@ html, body {
 
 #footer-menu li {
     display: inline-block;
+    vertical-align: top;
 }
 
 h1.site-title-in-header {
@@ -73,7 +74,6 @@ h1.site-title-in-header:before {
     color: #FFF;/*文字・アイコン色*/
     border-radius: 7px;/*角丸に*/
     position: relative;
-    top: 0.65em;
     display: inline-block;
     height: 23px;/*高さ*/
     width: 125px;/*幅*/
