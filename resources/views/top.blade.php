@@ -16,25 +16,31 @@
                     </div><!-- .inner -->
 
                     <article>
-                        <h1 class="article">記事一覧</h1>
-                        <p>おもちの日常について投稿します。</p>
+                        <h2 class="article">記事一覧</h2>
+                        <h3>おもちの日常について投稿します。</h3>
 
                         @if(!empty($data))
                             <div class="flex-box">
-                            @foreach($data as $list)
-                                <div class="flex-item">
-                                    <a href="{{ action('PostController@post', $list->id) }}"></a>
-                                    @if(!empty($list->image1))
-                                    <img src="{{$list->image1}}" width="100%"/>
-                                    @endif
-                                    <h3><span style="color: black;">タイトル：{{$list->title}}</span></h3>
-                                    @if($now->diffInYears($list->created_at) !== 0)
-                                        <p><span style="color: black;">{{$now->diffInYears($list->created_at)}}年前</span></p>
-                                    @elseif($now->diffInWeeks($list->created_at) !== 0)
-                                        <p><span style="color: black;">{{$now->diffInWeeks($list->created_at)}}週間前</span></p>
-                                    @elseif($now->diffInDays($list->created_at) !== 0)
-                                        <p><span style="color: black;">{{$now->diffInDays($list->created_at)}}日前</span></p>
-                                    @elseif($now->diffInHours($list->created_at) !== 0)
+                                @foreach($data as $list)
+                                    <div class="flex-item">
+                                        <a href="{{ action('PostController@post', $list->id) }}"></a>
+                                        <h4><span style="color: black;">タイトル：{{$list->title}}</span></h4>
+                                        @if(!empty($list->image1))
+                                            <img src="{{$list->image1}}" width="100%"/>
+                                        @endif
+                                        @if($now->diffInYears($list->created_at) !== 0)
+                                            <p><span
+                                                    style="color: black;">{{$now->diffInYears($list->created_at)}}年前</span>
+                                            </p>
+                                        @elseif($now->diffInWeeks($list->created_at) !== 0)
+                                            <p><span
+                                                    style="color: black;">{{$now->diffInWeeks($list->created_at)}}週間前</span>
+                                            </p>
+                                        @elseif($now->diffInDays($list->created_at) !== 0)
+                                            <p><span
+                                                    style="color: black;">{{$now->diffInDays($list->created_at)}}日前</span>
+                                            </p>
+                                        @elseif($now->diffInHours($list->created_at) !== 0)
                                         <p><span style="color: black;">{{$now->diffInHours($list->created_at)}}時間前</span></p>
                                     @elseif($now->diffInMinutes($list->created_at) !== 0)
                                         <p><span style="color: black;">{{$now->diffInMinutes($list->created_at)}}分前</span></p>
@@ -48,7 +54,7 @@
 
                     </article>
 
-                    {{ $data->links() }}
+                    {{ $data->onEachSide(5)->links() }}
 
                 </header><!-- #masthead -->
             </div>
