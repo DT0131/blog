@@ -4,13 +4,9 @@
 
 /* CSS Document */
 
-html, body {
-    height: 100%;
-}
-
 #header-bar {
     width: 100%;
-    padding: 45px 0;
+    padding: 15px 0;
     margin: 0 auto;
 }
 
@@ -20,6 +16,12 @@ html, body {
 
 #header-menu li {
     display: inline-block;
+}
+
+#footer-bar {
+    width: 100%;
+    padding: 15px 0;
+    margin: 0 auto;
 }
 
 #footer-menu {
@@ -34,25 +36,23 @@ html, body {
 }
 
 h1.site-title-in-header {
-    position: absolute; /*相対位置*/
-    padding-left: 1.3em; /*アイコン分のスペース*/
+    padding-left: 0.3em; /*アイコン分のスペース*/
     line-height: 1.2; /*行高*/
     color: black; /*文字色*/
-    font-size: 250%;
-    top: 0;
-    left: 0;
+    font-size: 350%;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     text-align: left;
+    vertical-align: middle;
 }
 
 h1.site-title-in-header:before {
     font-family: "Font Awesome 5 Free";
-    content: "\f1b0";/*アイコンのユニコード*/
-    position: absolute;/*絶対位置*/
-    font-size: 1em;/*サイズ*/
-    left: 0.3em;/*アイコンの位置*/
-    top: 0;/*アイコンの位置*/
+    font-weight: 900;
+    content: "\f1b0"; /*アイコンのユニコード*/
+    font-size: 1em; /*サイズ*/
     color: lightpink; /*アイコン色*/
+    text-align: left;
+    vertical-align: middle;
 }
 
 .header-link {
@@ -71,18 +71,18 @@ h1.site-title-in-header:before {
 
 .btn-social-long-instagram {
     /*ボタンの下地*/
-    color: #FFF;/*文字・アイコン色*/
-    border-radius: 7px;/*角丸に*/
+    color: #FFF; /*文字・アイコン色*/
+    border-radius: 7px; /*角丸に*/
     position: relative;
     display: inline-block;
-    height: 23px;/*高さ*/
-    width: 125px;/*幅*/
-    text-align: center;/*中身を中央寄せ*/
-    font-size: 20px;/*文字のサイズ*/
-    line-height: 20px;/*高さと合わせる*/
-    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
-    overflow: hidden;/*はみ出た部分を隠す*/
-    text-decoration:none;/*下線は消す*/
+    height: 1.8em; /*高さ*/
+    width: 7.5em; /*幅*/
+    text-align: center; /*中身を中央寄せ*/
+    font-size: 20px; /*文字のサイズ*/
+    line-height: 20px; /*高さと合わせる*/
+    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat; /*グラデーション①*/
+    overflow: hidden; /*はみ出た部分を隠す*/
+    text-decoration: none; /*下線は消す*/
 }
 
 .btn-social-long-instagram:before {
@@ -91,9 +91,9 @@ h1.site-title-in-header:before {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;/*全体を覆う*/
-    height: 100%;/*全体を覆う*/
-    background: linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+    width: 100%; /*全体を覆う*/
+    height: 100%; /*全体を覆う*/
+    background: linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 15%, rgba(255, 77, 64, 0) 50%) no-repeat;
 }
 
 .btn-social-long-instagram .fab fa-instagram {
@@ -123,28 +123,6 @@ h1.site-title-in-header:before {
     height: 620px;
 }
 
-h1.site-title {
-    position: absolute;/*相対位置*/
-    padding-left: 1.3em;/*アイコン分のスペース*/
-    line-height: 1.4;/*行高*/
-    color: black;/*文字色*/
-    font-size : 350%;
-    top: 6%;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    width: 100%;
-    text-align: left;
-}
-
-h1.site-title:before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f1b0";/*アイコンのユニコード*/
-    position: absolute;/*絶対位置*/
-    font-size: 1em;/*サイズ*/
-    left: 0.2em;/*アイコンの位置*/
-    top: 1%;/*アイコンの位置*/
-    color: lightpink; /*アイコン色*/
-}
-
 ul.menu-social {
     position: absolute;/*相対位置*/
     top: 80%;
@@ -156,18 +134,20 @@ li.menu-item {
     margin-right: 10px;
 }
 
-h1.article {
+h2.article {
     position: relative;
     background: #ffd98a;
-    padding: 2px 5px 2px 45px;
+    padding: 2px 5px 2px 40px;
+    margin: 14px 5px 14px 10px;
     font-size: 30px;
     color: #474747;
     border-radius: 20px;
 }
 
-h1.article:before {
+h2.article:before {
     font-family: "Font Awesome 5 Free";
-    content: "\f1b0";/*アイコンのユニコード*/
+    font-weight: 900;
+    content: "\f1b0"; /*アイコンのユニコード*/
     display: inline-block;
     line-height: 40px;
     position: absolute;
@@ -203,11 +183,11 @@ h1.article:before {
 @media (min-width: 1237px) {
     .flex-item {
         position: relative;
-        padding: 10px;
+        padding: 15px;
         color: #fff; /* 文字色 */
-        margin: 10px; /* 外側の余白 */
-        border-radius: 5px; /* 角丸指定 */
-        width: 30%; /* 幅指定 */
+        margin: 0.5em; /* 外側の余白 */
+        border-radius: 20px; /* 角丸指定 */
+        width: 32%; /* 幅指定 */
     }
 }
 
@@ -215,11 +195,11 @@ h1.article:before {
 @media (max-width: 1236px) {
     .flex-item {
         position: relative;
-        padding: 10px;
+        padding: 15px;
         color: #fff; /* 文字色 */
-        margin: 10px; /* 外側の余白 */
-        border-radius: 5px; /* 角丸指定 */
-        width: 45%; /* 幅指定 */
+        margin: 0.5em; /* 外側の余白 */
+        border-radius: 20px; /* 角丸指定 */
+        width: 48%; /* 幅指定 */
     }
 }
 
@@ -273,35 +253,48 @@ h1.article:before {
 }
 
 .flex-item:nth-child(11) {
-    background-color:  #ffd98a; /* 背景色指定 */
+    background-color: #ffd98a; /* 背景色指定 */
 }
 
 .flex-item:nth-child(12) {
-    background-color:  #ffd98a; /* 背景色指定 */
+    background-color: #ffd98a; /* 背景色指定 */
 }
 
+/**
+ページネーションデザイン
+ */
 .pagination {
-    text-align: right;
+    padding: 30px 0 20px 0;
 }
 
-.pagination li {
-    display: inline;
-    padding:10px 15px;
-    border:1px #ccc solid;color:#000053;
-    border-radius: 5px / 5px;
+.pagination ul {
+    width: 375px;
+    margin: 0 auto;
 }
 
-.pagination .this {
-    background-color: #777;
+.pagination ul li {
+    display: inline-block;
+}
+
+.pagination span {
+    padding: 10px 18px;
+    font-size: 18px;
+}
+
+.pagination a {
+    padding: 10px 18px;
+    font-size: 18px;
+}
+
+.pagination a:first-of-type, .pagination a:last-of-type {
+    background-color: orange;
     color: #fff;
-    text-align: center;
+    border-color: #F8FAFC;
+    font-weight: bold;
 }
 
 
-
-
-
-.post{
+.post {
     position: relative;
     background: #fff0cd;
     box-shadow: 0px 0px 0px 5px #fff0cd;

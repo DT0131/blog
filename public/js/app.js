@@ -39670,8 +39670,8 @@ type StyleObjectPart = {
                                     staticClass: "bm-cross",
                                     style: ({
                                         position: 'absolute',
-                                        width: '3px',
-                                        height: '14px',
+                                        width: '5px',
+                                        height: '35px',
                                         transform: index === 1 ? 'rotate(45deg)' : 'rotate(-45deg)'
                                     })
                                 })
