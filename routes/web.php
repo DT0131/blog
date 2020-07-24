@@ -37,3 +37,7 @@ Route::post('/contact', 'ContactController@store');
 
 // サイトマップ
 Route::get('/sitemap', 'SiteMapController@sitemap');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
