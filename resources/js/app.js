@@ -8,8 +8,6 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-import {Slide} from 'vue-burger-menu'
-
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -23,8 +21,6 @@ import {Slide} from 'vue-burger-menu'
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-Vue.component('Slide', Slide);
-
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -33,7 +29,4 @@ Vue.component('Slide', Slide);
 
 const app = new Vue({
     el: '#app',
-    components: {
-        Slide
-    }
 });
