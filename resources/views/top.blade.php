@@ -25,6 +25,9 @@
                                     <div class="flex-item">
                                         <a href="{{ action('PostController@post', $list->id) }}"></a>
                                         <h4><span style="color: black;">タイトル：{{$list->title}}</span></h4>
+                                        @if(!empty($list->image1))
+                                            <img src="{{$list->image1}}" width="100%"/>
+                                        @endif
                                         <p><span style="color: black;">{{$postedDateList[$key]}}</span></p>
                                 </div>
                             @endforeach
