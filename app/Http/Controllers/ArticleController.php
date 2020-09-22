@@ -18,13 +18,13 @@ class ArticleController extends Controller
         // バリデーションチェック
         $request->validate([
             'title' => ['required', 'max:30'],
-            'content' => ['required', 'max:1000'],
+            'detail' => ['required', 'max:1000'],
         ]);
 
         // バリデーション成功時はデータの保存
         $articles = new Articles;
         $articles->title = $request->title;
-        $articles->content = $request->content;
+        $articles->detail = $request->detail;
         $articles->creators_ip = $request->ip();
 
         // S3にファイルをアップロード

@@ -21,32 +21,11 @@
 
                         @if(!empty($data))
                             <div class="flex-box">
-                                @foreach($data as $list)
+                                @foreach($data as $key => $list)
                                     <div class="flex-item">
                                         <a href="{{ action('PostController@post', $list->id) }}"></a>
                                         <h4><span style="color: black;">タイトル：{{$list->title}}</span></h4>
-                                        @if(!empty($list->image1))
-                                            <img src="{{$list->image1}}" width="100%"/>
-                                        @endif
-                                        @if($now->diffInYears($list->created_at) !== 0)
-                                            <p><span
-                                                    style="color: black;">{{$now->diffInYears($list->created_at)}}年前</span>
-                                            </p>
-                                        @elseif($now->diffInWeeks($list->created_at) !== 0)
-                                            <p><span
-                                                    style="color: black;">{{$now->diffInWeeks($list->created_at)}}週間前</span>
-                                            </p>
-                                        @elseif($now->diffInDays($list->created_at) !== 0)
-                                            <p><span
-                                                    style="color: black;">{{$now->diffInDays($list->created_at)}}日前</span>
-                                            </p>
-                                        @elseif($now->diffInHours($list->created_at) !== 0)
-                                        <p><span style="color: black;">{{$now->diffInHours($list->created_at)}}時間前</span></p>
-                                    @elseif($now->diffInMinutes($list->created_at) !== 0)
-                                        <p><span style="color: black;">{{$now->diffInMinutes($list->created_at)}}分前</span></p>
-                                    @else
-                                        <p><span style="color: black;">{{$now->diffInSeconds($list->created_at)}}秒前</span></p>
-                                    @endif
+                                        <p><span style="color: black;">{{$postedDateList[$key]}}</span></p>
                                 </div>
                             @endforeach
                             </div>

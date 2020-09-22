@@ -10,7 +10,7 @@
 <h1 class="article">{{$data->title}}</h1>
 
 <div class="post">
-    <p>{!! nl2br($data->content) !!}</p>
+    <p>{!! nl2br($data->detail) !!}</p>
 {{--    @if(!empty($data->image1))--}}
 {{--    <p><img src="{{$data->image1}}" width="32%"/></p>--}}
 {{--    @endif--}}
