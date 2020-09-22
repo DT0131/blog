@@ -24,10 +24,10 @@
         <strong>「画像2」、「画像3」の文字を入力することでその位置に画像を表示できます。</strong>
         <div>
             <label for="message">内容</label>
-            <textarea id="content" name="content"></textarea>
+            <textarea id="detail" name="detail"></textarea>
         </div>
-        @error('content')
-        @if ($message === "The content field is required.")
+        @error('detail')
+        @if ($message === "The detail field is required.")
             <div class="alert alert-danger">必ず入力してください。</div>
         @elseif ($message === "The title may not be greater than 1000 characters.") {
         <div class="alert alert-danger">1000文字以内で入力してください。</div>
