@@ -17,15 +17,15 @@ class PostController extends Controller
             // 投稿データ取得
             $data = $articles->getArticleData($request['id']);
 
-            if (strpos($data->detail, '画像2') === false AND strpos($data->content, '画像3') === false) {
+            if (strpos($data->detail, '画像2') === false AND strpos($data->detail, '画像3') === false) {
                 return view('post',compact('data'));
             }
 
             if (strpos($data->detail, '画像2') !== false) {
-                $data->content = str_replace('画像2', "<img src='".$data->image2."' width='32%'/>", $data->detail);
+                $data->detail = str_replace('画像2', "<img src='".$data->image2."' width='32%'/>", $data->detail);
             }
             if (strpos($data->detail, '画像3') !== false) {
-                $data->content = str_replace('画像3', "<img src='".$data->image3."' width='32%'/>", $data->detail);
+                $data->detail = str_replace('画像3', "<img src='".$data->image3."' width='32%'/>", $data->detail);
             }
         }
         return view('post',compact('data'));
