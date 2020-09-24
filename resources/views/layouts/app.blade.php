@@ -16,6 +16,7 @@
     </script>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1", shrink-to-fit=no">
     <title>@yield('title')</title>
     <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
@@ -26,21 +27,8 @@
 <body>
 @section('header')
     <div id="header-bar">
-        <h1 class="site-title-in-header">おもちの毎日</h1>
-        <div id="app">
-            <Slide right>
-                <a href="{{ route('top.index') }}">
-                    <span style="font-size: 2em">Home</span>
-                </a>
-                <a target="_blank" href="https://www.instagram.com/omomaru_no_iru_seikatsu/?hl=ja">
-                    <span style="font-size: 2em">Instagram</span>
-                </a>
-                <a id="contact" href="{{ route('contact.index') }}">
-                    <span style="font-size: 2em">Contact</span>
-                </a>
-            </Slide>
-            <div id="page-wrap"></div>
-        </div>
+        <h1 class="site-title-in-header">おもまるの毎日</h1>
+        <div id="app"><side-bar-component></side-bar-component></div>
         <script src="{{mix('js/app.js')}}"></script>
     </div>
 @show

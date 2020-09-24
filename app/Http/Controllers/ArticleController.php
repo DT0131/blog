@@ -30,7 +30,6 @@ class ArticleController extends Controller
         // S3にファイルをアップロード
         if (!empty($request->images)) {
             foreach ($request->images as $key => $image) {
-                var_dump('画像あり');
                 if (empty($image)) {
                     continue;
                 }
