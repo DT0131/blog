@@ -7,7 +7,7 @@
       <span style="font-size: 2em">Instagram</span>
     </a>
     <a class="side-bar-list" href="/contact">
-      <span style="font-size: 1.8em">お問い合わせ</span>
+      <span style="font-size: 2em">Contact</span>
     </a>
   </Slide>
 </template>

@@ -12,7 +12,8 @@ class UserPosts extends Model
         parent::boot();
 
         static::creating(function ($model) {
-            $model->uuid = Uuid::generate()->string;
+            $randomWord = Uuid::generate()->string;
+            $model->uuid = substr($randomWord, 0 ,8);
         });
     }
 
