@@ -41678,9 +41678,7 @@ var render = function() {
     ),
     _vm._v(" "),
     _c("a", { staticClass: "side-bar-list", attrs: { href: "/contact" } }, [
-      _c("span", { staticStyle: { "font-size": "1.8em" } }, [
-        _vm._v("お問い合わせ")
-      ])
+      _c("span", { staticStyle: { "font-size": "2em" } }, [_vm._v("Contact")])
     ])
   ])
 }
