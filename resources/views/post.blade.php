@@ -18,8 +18,7 @@
         @if(count($userPostData) > 0)
             <ul class="user-post-list" style="list-style: none;">
                 @foreach($userPostData as $userPost)
-                    <li>{{$loop->iteration}}：<span style="color:#38c172; font-size:18px;">{{$userPost->name}}</span> ID:{{$userPost->uuid}}</li>
-                    <li>{{$userPost->created_at->format('Y/m/d').'('.$week[$userPost->created_at->format('w')].') '.$userPost->created_at->format('H:i:s')}}</li>
+                    <li>{{$loop->iteration}}：<span style="color:#38c172; font-size:18px;">{{$userPost->name}}</span> {{$userPost->created_at->format('Y/m/d').'('.$week[$userPost->created_at->format('w')].') '.$userPost->created_at->format('H:i:s')}} ID:{{$userPost->uuid}}</li>
                     <li>&nbsp;&nbsp;{{$userPost->detail}}</li>
                 @endforeach
             </ul>
@@ -52,7 +51,7 @@
         @enderror
         <button type="submit">書き込む</button>
     </form>
-    <p>※コメントの削除依頼はお問い合わせからお願い致します。</p>
+    <p>※コメントの削除依頼は画面右上のContactフォームからお願い致します。</p>
 </div>
 @endsection
 @section('footer')
