@@ -26,11 +26,11 @@ class Articles extends Model
      */
     public function getPageViewCountsForAll()
     {
-        return Articles::orderBy('created_at', 'desc')->paginate(12);
+        return self::orderBy('created_at', 'desc')->paginate(12);
     }
 
     public function getArticleData($id)
     {
-        return Articles::where('id', $id)->first();
+        return self::where('id', $id)->first();
     }
 }

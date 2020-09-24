@@ -15,9 +15,9 @@
 
                     </div><!-- .inner -->
 
-                    <article>
+                    <article class="container-fluid">
                         <h2 class="article">記事一覧</h2>
-                        <h3>おもちの日常について投稿します。</h3>
+                        <h3>おもちとまるの日常について投稿します。</h3>
 
                         @if(!empty($data))
                             <div class="flex-box">
@@ -29,8 +29,8 @@
                                             <img src="{{$list->image1}}" width="100%"/>
                                         @endif
                                         <p><span style="color: black;">{{$postedDateList[$key]}}</span></p>
-                                </div>
-                            @endforeach
+                                    </div>
+                                @endforeach
                             </div>
                         @endif
 

@@ -38,10 +38,16 @@ h1.site-title-in-header {
     padding-left: 0.3em; /*アイコン分のスペース*/
     line-height: 1.2; /*行高*/
     color: black; /*文字色*/
-    font-size: 350%;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     text-align: left;
     vertical-align: middle;
+}
+
+/* ▼表示領域が545px以上の場合 */
+@media (min-width: 545px) {
+    h1.site-title-in-header {
+        font-size: 350%;
+    }
 }
 
 h1.site-title-in-header:before {
@@ -120,6 +126,7 @@ h1.site-title-in-header:before {
     background-repeat: no-repeat;
     background-size: cover;
     height: 620px;
+    /*background-color: #FFF !important;*/
 }
 
 ul.menu-social {
@@ -178,8 +185,8 @@ h2.article:before {
     align-content: stretch; /* 折り返し時の配置指定 */
 }
 
-/* ▼表示領域が1237px以上の場合 */
-@media (min-width: 1237px) {
+/* ▼表示領域が1200px以上の場合 */
+@media (min-width: 1200px) {
     .flex-item {
         position: relative;
         padding: 15px;
@@ -190,8 +197,8 @@ h2.article:before {
     }
 }
 
-/* ▼表示領域が1237px未満の場合 */
-@media (max-width: 1236px) {
+/* ▼表示領域が992px以上1200px未満の場合 */
+@media (min-width: 992px) and (max-width: 1199px) {
     .flex-item {
         position: relative;
         padding: 15px;
@@ -199,6 +206,49 @@ h2.article:before {
         margin: 0.5em; /* 外側の余白 */
         border-radius: 20px; /* 角丸指定 */
         width: 48%; /* 幅指定 */
+    }
+}
+
+/* ▼表示領域が768px以上992px未満の場合 */
+@media (min-width: 768px) and (max-width: 991px) {
+    .flex-item {
+        position: relative;
+        padding: 15px;
+        color: #fff; /* 文字色 */
+        margin: 0.5em; /* 外側の余白 */
+        border-radius: 20px; /* 角丸指定 */
+        width: 48%; /* 幅指定 */
+    }
+}
+
+/* ▼表示領域が544px以上768px未満の場合 */
+@media (min-width: 544px) and (max-width: 767px) {
+    .flex-item {
+        position: relative;
+        padding: 15px;
+        color: #fff; /* 文字色 */
+        margin: 0.5em; /* 外側の余白 */
+        border-radius: 20px; /* 角丸指定 */
+        width: 96%; /* 幅指定 */
+    }
+}
+
+/* ▼表示領域が544px未満の場合 */
+@media (max-width: 544px) {
+    .flex-item {
+        position: relative;
+        padding: 15px;
+        color: #fff; /* 文字色 */
+        margin: 0.5em; /* 外側の余白 */
+        border-radius: 20px; /* 角丸指定 */
+        width: 96%; /* 幅指定 */
+    }
+    h1.site-title-in-header {
+        font-size: 250%;
+    }
+    .bm-burger-button {
+        top: 22px !important;
+        right: 20px !important;
     }
 }
 
@@ -312,6 +362,30 @@ h2.article:before {
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
+.user-post {
+    position: relative;
+    background: #ffd98a;
+    box-shadow: 0px 0px 0px 5px #ffd98a;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
+    margin-top: 25px;
+}
+.user-post:after{
+    position: absolute;
+    content: '';
+    right: -7px;
+    top: -7px;
+    border-width: 0 15px 15px 0;
+    border-style: solid;
+    border-color: #ffdb88 #fff #ffdb88;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.user-post-list {
+    padding: 0;
+}
+
 .post p {
     margin: 0;
     padding: 0;
@@ -355,4 +429,8 @@ input#button {
 
 .alert-danger {
     color: red;
+}
+
+.bm-menu {
+    background-color: #ffd98a !important;
 }

@@ -30,7 +30,8 @@ Route::get('/article', 'ArticleController@index');
 
 Route::post('/article', 'ArticleController@store');
 
-Route::get('post/{id}', 'PostController@post');
+Route::get('/post/{id}', 'PostController@post');
+Route::post('/post', 'PostController@store');
 
 Route::resource('contact', 'ContactController');
 Route::post('/contact', 'ContactController@store');
